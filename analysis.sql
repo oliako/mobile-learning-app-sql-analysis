@@ -25,7 +25,7 @@ SELECT
     COUNT(DISTINCT CASE WHEN event_name = 'finish_lesson' THEN user_id END) AS finish_users
 FROM events;
 
---6. 
+--6. Conversion
 SELECT 
     COUNT(DISTINCT s.user_id) * 1.0 / COUNT(DISTINCT u.user_id) AS conversion_rate
 FROM users u
